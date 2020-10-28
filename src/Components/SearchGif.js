@@ -31,11 +31,15 @@ class SearchGif extends React.Component {
     return (
       <>
         <div className="search_box" onKeyPress={this.getGiph}>
-          <input type="text" placeholder="search gifs..." id="searchtxt" />
+          <input
+            type="text"
+            placeholder="search gifs hit enter..."
+            id="searchtxt"
+          />
           <i className="fas fa-search"></i>
         </div>
         <GifList giphys={this.state.giphsarr} />
-        {this.state.showLoading ? <img src={loading} alt="logo" /> : null}
+        {this.state.showLoading ? <img src={loading} /> : null}
       </>
     );
   }
