@@ -21,14 +21,14 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, nextPage }) => {
             <a
               onClick={(e) => paginateUtil(e, number)}
               className="active"
-              href="!#"
+              href="#"
             >
               {number}
             </a>
           );
         else
           return (
-            <a onClick={(e) => paginateUtil(e, number)} href="!#">
+            <a onClick={(e) => paginateUtil(e, number)} href="#">
               {number}
             </a>
           );

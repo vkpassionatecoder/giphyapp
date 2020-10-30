@@ -13,17 +13,13 @@ class SearchGif extends React.Component {
       this.setState({ giphsarr: [] }, () => {
         this.setState({ showLoading: true });
       });
-
-      debugger;
       const APIKEY = "cKNUAOIHxN8zkML8bCAOPxOz59UOyJnm";
       let searchTxt = document.getElementById("searchtxt").value;
       const url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&q=${searchTxt}`;
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
-          this.setState({ giphsarr: data.data, showLoading: false }, () => {
-            console.log(this.state.giphsarr);
-          });
+          this.setState({ giphsarr: data.data, showLoading: false });
         });
     }
   };

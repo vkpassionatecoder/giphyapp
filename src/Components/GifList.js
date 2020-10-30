@@ -36,12 +36,11 @@ class GifList extends React.Component {
         : [];
     return (
       <>
-        <div id="myModal" class="modal">
+        <div id="myModal" class="full-modal-image">
           <span onClick={this.closeModal} class="close">
             &times;
           </span>
-          <img class="modal-content" id="img01" />
-          <div id="caption"></div>
+          <img class="full-modal-content" id="img01" />
         </div>
         <div className="img-container">
           {currentGiphys.length > 0
